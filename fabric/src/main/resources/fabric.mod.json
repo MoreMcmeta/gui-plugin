@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "moremcmeta_gui_plugin",
+  "version": "${modVersion}",
+  "name": "MoreMcmeta GUI Plugin",
+  "description": "Default plugin for MoreMcmeta that loads GUI texture settings.",
+  "authors": [
+    "soir20"
+  ],
+  "contact": {
+    "homepage": "https://github.com/MoreMcmeta",
+    "sources": "https://github.com/MoreMcmeta/gui-plugin"
+  },
+  "license": "LGPL-3.0",
+  "environment": "*",
+  "entrypoints": {
+    "moremcmeta-client": [
+      "io.github.moremcmeta.guiplugin.fabric.GuiPluginFabric"
+    ]
+  },
+  "depends": {
+    "minecraft": ">=${minecraftVersion}",
+    "moremcmeta": "${minMoreMcmetaVersion}"
+  }
+}
