@@ -50,14 +50,14 @@ public final class GuiMetadataAnalyzer implements MetadataAnalyzer {
             frameWidth = scalingSection.integerValue("width");
             frameHeight = scalingSection.integerValue("height");
 
-            if (frameWidth.isEmpty()) {
+            if (!frameWidth.isPresent()) {
                 throw new InvalidMetadataException("Missing width field in scaling section");
             }
             if (frameWidth.get() <= 0) {
                 throw new InvalidMetadataException("Frame width must be positive");
             }
 
-            if (frameHeight.isEmpty()) {
+            if (!frameHeight.isPresent()) {
                 throw new InvalidMetadataException("Missing height field in scaling section");
             }
             if (frameHeight.get() <= 0) {

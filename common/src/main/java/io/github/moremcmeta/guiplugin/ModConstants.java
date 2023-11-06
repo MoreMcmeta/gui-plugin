@@ -19,6 +19,7 @@ package io.github.moremcmeta.guiplugin;
 
 import io.github.moremcmeta.moremcmeta.api.client.metadata.MetadataAnalyzer;
 import io.github.moremcmeta.moremcmeta.api.client.texture.ComponentBuilder;
+import io.github.moremcmeta.moremcmeta.api.client.texture.CurrentFrameView;
 import io.github.moremcmeta.moremcmeta.api.client.texture.TextureComponent;
 
 /**
@@ -29,5 +30,5 @@ public final class ModConstants {
     public static final String MOD_ID = "moremcmeta_gui_plugin";
     public static final String SECTION_NAME = "gui";
     public static final MetadataAnalyzer ANALYZER = new GuiMetadataAnalyzer();
-    public static final ComponentBuilder COMPONENT_BUILDER = ((metadata, frames) -> new TextureComponent<>() {});
+    public static final ComponentBuilder COMPONENT_BUILDER = ((metadata, frames) -> new TextureComponent<CurrentFrameView>() {});
 }

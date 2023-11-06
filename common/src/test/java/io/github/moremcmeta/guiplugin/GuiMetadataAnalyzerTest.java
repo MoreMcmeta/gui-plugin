@@ -69,7 +69,7 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.Stretch(), result.guiScaling().orElseThrow());
+        assertEquals(new GuiScaling.Stretch(), result.guiScaling().get());
         assertFalse(result.frameWidth().isPresent());
         assertFalse(result.frameHeight().isPresent());
     }
@@ -85,7 +85,7 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.Stretch(), result.guiScaling().orElseThrow());
+        assertEquals(new GuiScaling.Stretch(), result.guiScaling().get());
         assertFalse(result.frameWidth().isPresent());
         assertFalse(result.frameHeight().isPresent());
     }
@@ -183,9 +183,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.Tile(), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.Tile(), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -317,9 +317,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(0, 0, 0, 0), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(0, 0, 0, 0), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -334,9 +334,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(3, 3, 3, 3), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(3, 3, 3, 3), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -395,9 +395,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(0, 2, 3, 4), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(0, 2, 3, 4), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -456,9 +456,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(1, 0, 3, 4), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(1, 0, 3, 4), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -517,9 +517,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(1, 2, 0, 4), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(1, 2, 0, 4), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -578,9 +578,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(1, 2, 3, 0), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(1, 2, 3, 0), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
     @Test
@@ -600,9 +600,9 @@ public final class GuiMetadataAnalyzerTest {
         ));
 
         AnalyzedMetadata result = ANALYZER.analyze(metadata, 100, 100);
-        assertEquals(new GuiScaling.NineSlice(1, 2, 3, 4), result.guiScaling().orElseThrow());
-        assertEquals(10, (int) result.frameWidth().orElseThrow());
-        assertEquals(20, (int) result.frameHeight().orElseThrow());
+        assertEquals(new GuiScaling.NineSlice(1, 2, 3, 4), result.guiScaling().get());
+        assertEquals(10, (int) result.frameWidth().get());
+        assertEquals(20, (int) result.frameHeight().get());
     }
 
 }
