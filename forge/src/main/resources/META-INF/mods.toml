@@ -10,6 +10,7 @@ authors = "soir20"
 description = '''
 Default plugin for MoreMcmeta that loads GUI texture settings.
 '''
+logoFile="moremcmeta-logo-gradient.png"
 
 [[dependencies.moremcmeta_gui_plugin]]
 modId = "moremcmeta"
